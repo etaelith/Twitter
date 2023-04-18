@@ -1,0 +1,71 @@
+
+.twArticle {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: .8rem;
+  justify-content: space-between;
+}
+
+.twHeader{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.twDiv{
+  display: flex;
+  flex-direction: column;
+}
+
+.twSpan{
+  opacity: .6;
+}
+
+.twImg{
+  width: 48px;
+  height: 48px;
+  border-radius: 1000px;
+}
+
+.twFollowingTrue, .twFollowingFalse{
+  cursor: pointer;
+  margin-left: 16px;
+  border: 0;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-weight: bold;
+  border: 1px solid #000;
+  transition: .3s ease background-color;
+}
+.twFollowingFalse:hover{
+  background-color: #1da0f2a9;
+  opacity: 1;
+  border: 1px solid #1DA1F2;
+  transition: .3s ease all;
+}
+.twButton:hover{
+  opacity: .8;
+}
+.twFollowingTrue{
+  border: 1px solid #bbb;
+  background: transparent;
+  color: #fff;
+  width: 140px;
+}
+.twFollowingTrue:hover{
+  background-color: rgba(255, 0, 0, 0.178);
+  color: red;
+  border: 1px solid red;
+  transition: .3s ease all;
+  opacity: 1;
+}
+.twFollowingTrue:hover .twFollowText{
+  display: none;
+}
+.twFollowingTrue:hover .twFollowStop{
+  display: block;
+}
+.twFollowStop{
+  display: none;
+}
