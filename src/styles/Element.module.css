@@ -1,0 +1,21 @@
+.menuElement {
+  list-style: none;
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 20px;
+}
+
+.flexElement {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.imgElement {
+  fill: white;
+}
+
+.textSpan {
+  margin-left: 1em;
+}

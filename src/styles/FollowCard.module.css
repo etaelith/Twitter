@@ -1,0 +1,6 @@
+.cardFollow {
+  background: rgb(22, 24, 28);
+  border-radius: 10%;
+  padding: 1rem;
+  max-height:32vh;
+}

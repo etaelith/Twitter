@@ -1,14 +1,16 @@
 body {
   margin: 0;
-  background: #222;
+  background: black;
   font-family: system-ui;
   display: grid;
-  place-content: center;
+  place-content: space-evenly;
   min-height: 100vh;
 }
 
 .App {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: auto 1fr auto;
+  width: 98vw;
+  height: 100vh;
 }
