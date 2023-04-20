@@ -1,15 +1,15 @@
-import profile from "../assets/profile.svg";
-import home from "../assets/home.svg";
-import bookmarks from "../assets/bookmarks.svg";
-import communities from "../assets/communities.svg";
-import explore from "../assets/explore.svg";
-import more from "../assets/more.svg";
-import notifications from "../assets/notifications.svg";
-import messages from "../assets/messages.svg";
-import twitterblue from "../assets/twitter-blue.svg";
-import styles from "../styles/Navbar.module.css";
+import Element from "./Element";
 
-import Element from "./NavBar/Element";
+import home from "@/assets/home.svg";
+import bookmarks from "@/assets/bookmarks.svg";
+import communities from "@/assets/communities.svg";
+import explore from "@/assets/explore.svg";
+import more from "@/assets/more.svg";
+import notifications from "@/assets/notifications.svg";
+import messages from "@/assets/messages.svg";
+import twitterblue from "@/assets/twitterblue.svg";
+import styles from "@/styles/Navbar.module.css";
+import profile from "@/assets/profile.svg";
 
 const menu = [
   {

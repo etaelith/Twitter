@@ -1,7 +1,6 @@
-import {Avatar} from "boring-avatars";
 import {useState} from "react";
 
-import styles from "../styles/User.module.css";
+import styles from "@/styles/User.module.css";
 
 const TwitterCard = ({
   userName = "EtaelithDev",

@@ -1,11 +1,15 @@
 .menuElement {
   list-style: none;
   color: white;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 12px;
   font-size: 20px;
+  cursor: pointer;
+  border-radius: 9999px;
+  border: 0px solid black;
 }
-
+.menuElement:hover{
+  background-color: rgba(231, 233, 234, 0.1);
+}
 .flexElement {
   display: flex;
   align-items: center;

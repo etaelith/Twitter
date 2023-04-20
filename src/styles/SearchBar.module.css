@@ -1,0 +1,31 @@
+.div{
+  display: flex;
+  background: rgb(22, 24, 28);
+  border-radius: 9999px;
+  padding: 1rem;
+  border: 1px solid black;
+}
+.div:focus-within{
+  background-color: black;
+  border: 1px solid rgb(29, 155, 240);
+}
+svg{
+  fill:rgb(45, 49, 58) ;
+}
+.div:focus-within svg{
+  fill: rgb(29, 155, 240);
+}
+.searchIcon{
+  margin-right: 1em;
+}
+.input{
+  flex: 1;
+  background-color:rgb(22, 24, 28);
+  border: none;
+}
+input:focus{
+  outline: none;
+  background-color: black;
+  color: white;
+  font-size: medium
+}

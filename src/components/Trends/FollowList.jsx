@@ -2,9 +2,10 @@ import React from "react";
 import {useState} from "react";
 import {useEffect} from "react";
 
-import styles from "../styles/FollowCard.module.css";
-import TwitterCard from "../TwitterCard";
-const Follow = () => {
+import TwitterCard from "./TwitterCard";
+
+import styles from "@/styles/FollowCard.module.css";
+const FollowList = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -42,4 +43,4 @@ const Follow = () => {
   );
 };
 
-export default Follow;
+export default FollowList;
