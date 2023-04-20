@@ -1,6 +1,3 @@
-import React from "react";
-
-import search from "@/assets/search.svg";
 import styles from "@/styles/SearchBar.module.css";
 const SearchBar = () => {
   return (

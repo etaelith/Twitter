@@ -1,7 +1,7 @@
-import SearchBar from "../components/Trends/SearchBar";
+import SearchBar from "../components/SocialBar/SearchBar";
 
-import FollowList from "@/components/Trends/FollowList";
-import Trends from "@/components/Trends/Trends";
+import FollowList from "@/components/SocialBar/Follow/FollowList";
+import Trends from "@/components/SocialBar/Trends/Trends";
 import styles from "@/styles/RightBar.module.css";
 const RightBar = () => {
   return (
