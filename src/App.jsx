@@ -1,5 +1,5 @@
 import Home from "./components/Main/Home";
-import Navbar from "./components/NavBar/Navbar";
+import Navbar from "./components/NavBar/Index";
 import RightBar from "./pages/RightBar";
 
 const App = () => {

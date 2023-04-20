@@ -4,6 +4,7 @@
   border-radius: 9999px;
   padding: 1rem;
   border: 1px solid black;
+  font-size: medium
 }
 .div:focus-within{
   background-color: black;
@@ -27,5 +28,5 @@ input:focus{
   outline: none;
   background-color: black;
   color: white;
-  font-size: medium
+
 }
