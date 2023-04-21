@@ -1,10 +1,10 @@
 import React from "react";
 import {useState} from "react";
 import {useEffect} from "react";
+import styles from "@socialbar/FollowCard.module.css";
 
 import TwitterCard from "./TwitterCard";
 
-import styles from "@/styles/FollowCard.module.css";
 const FollowList = () => {
   const [users, setUsers] = useState([]);
 

@@ -7,6 +7,18 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
+      //styles
+      "@main": "@/styles/main",
+      "@navbar": "@/styles/navbar",
+      "@socialbar": "@/styles/socialbar",
+      //assets
+      "@assets": "@/assets",
+      //utils
+      "@utils": "@/utils",
+      //components
+      "@components": "@/components",
+      //pages
+      "@pages": "@/pages",
     },
   },
   plugins: [react()],

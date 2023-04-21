@@ -1,0 +1,30 @@
+.div{
+  display: flex;
+  justify-content: space-around;
+}
+.card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+.card:hover{
+  background-color: rgba(128, 128, 128, 0.199);
+}
+
+.card span{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+}
+.active{
+  font-weight: bold;
+}
+.active span{
+  color: white;
+  border-bottom: 2px solid #1DA1F2;
+}

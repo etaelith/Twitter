@@ -1,6 +1,7 @@
+import styles from "@socialbar/Trends.module.css";
+
 import Element from "./Element";
 
-import styles from "@/styles/Trends.module.css";
 const trends = [
   {
     category: "Technology · Trending",

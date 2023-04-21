@@ -1,4 +1,4 @@
-import styles from "@/styles/Element.module.css";
+import styles from "@navbar/Element.module.css";
 const Element = ({props}) => {
   return (
     <li key={props.name} className={styles.menuElement}>

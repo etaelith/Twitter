@@ -1,6 +1,6 @@
-import Home from "./components/Main/Home";
-import Navbar from "./components/NavBar/Index";
-import RightBar from "./pages/RightBar";
+import Home from "@components/Main/Index";
+import Navbar from "@components/NavBar/Index";
+import RightBar from "@pages/RightBar";
 
 const App = () => {
   return (
