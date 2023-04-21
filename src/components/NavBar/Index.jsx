@@ -1,13 +1,13 @@
 import styles from "@navbar/Navbar.module.css";
-import home from "@assets/home.svg";
-import bookmarks from "@assets/bookmarks.svg";
-import communities from "@assets/communities.svg";
-import explore from "@assets/explore.svg";
-import more from "@assets/more.svg";
-import notifications from "@assets/notifications.svg";
-import messages from "@assets/messages.svg";
-import twitterblue from "@assets/twitterblue.svg";
-import profile from "@assets/profile.svg";
+import home from "@menu/home.svg";
+import bookmarks from "@menu/bookmarks.svg";
+import communities from "@menu/communities.svg";
+import explore from "@menu/explore.svg";
+import more from "@menu/more.svg";
+import notifications from "@menu/notifications.svg";
+import messages from "@menu/messages.svg";
+import twitterblue from "@menu/twitterblue.svg";
+import profile from "@menu/profile.svg";
 
 import Element from "./Element";
 

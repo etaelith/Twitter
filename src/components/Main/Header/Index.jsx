@@ -1,4 +1,4 @@
-import styles from "@main/Header.module.css";
+import styles from "@main/header/Header.module.css";
 
 import UserExp from "./UserExp";
 

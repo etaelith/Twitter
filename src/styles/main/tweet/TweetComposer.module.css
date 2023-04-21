@@ -1,0 +1,44 @@
+.div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.icons{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.icons > *{
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  padding: 0.2em;
+  margin: 0.2em;
+  box-sizing: border-box;
+  border-radius: 50%;
+  transform: scale(1.5);
+}
+.icons > *:hover{
+  background-color: rgba(128, 128, 128, 0.2);
+}
+.pushTweet{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.button{
+  height: auto;
+  width: 100%;
+  background-color: #1DA1F2;
+  color: white;
+  font-weight: lighter;
+  margin-left: 0.25em;
+  padding: 0.25em;
+  font-size: 1.2em;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+.button:disabled{
+  background-color: #1da0f296;
+}

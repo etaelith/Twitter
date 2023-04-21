@@ -1,6 +1,8 @@
-import styles from "@main/InterfaceTweet.module.css";
+import styles from "@main/tweet/InterfaceTweet.module.css";
 import world from "@assets/world.svg";
 import {useState} from "react";
+
+import TweetComposer from "./TweetComposer";
 const InterfaceTweet = () => {
   const [tweet, setTweet] = useState("");
   const handleChange = (event) => {
@@ -31,11 +33,13 @@ const InterfaceTweet = () => {
           />
         </form>
       </div>
-      <div className={styles.canReply}>
-        <img src={world} />
-        <div className={styles.textReply}>Everyone can reply</div>
+      <div className={styles.borderBottom}>
+        <div className={styles.canReply}>
+          <img src={world} />
+          <div className={styles.textReply}>Everyone can reply</div>
+        </div>
       </div>
-      <div>icons</div>
+      <TweetComposer count={tweet.length} limit={280} />
     </div>
   );
 };

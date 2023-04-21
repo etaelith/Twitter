@@ -1,5 +1,5 @@
 import {useState} from "react";
-import styles from "@main/UserExp.module.css";
+import styles from "@main/header/UserExp.module.css";
 
 import Card from "./Card";
 

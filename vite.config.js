@@ -13,6 +13,8 @@ export default defineConfig({
       "@socialbar": "@/styles/socialbar",
       //assets
       "@assets": "@/assets",
+      "@buttons": "@/assets/buttons",
+      "@menu": "@/assets/menu",
       //utils
       "@utils": "@/utils",
       //components

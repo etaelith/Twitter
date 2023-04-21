@@ -1,4 +1,4 @@
-import styles from "@main/UserExp.module.css";
+import styles from "@main/header/UserExp.module.css";
 
 const Card = ({children, active, onClick}) => {
   const className = active === children ? styles.active : "";

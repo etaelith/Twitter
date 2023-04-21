@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@main/Tweet.module.css";
+import styles from "@main/tweet/Tweet.module.css";
 
 import InterfaceTweet from "./InterfaceTweet";
 

@@ -49,12 +49,17 @@
 .canReply{
   border-radius: 50px;
   padding-left: 0.5em;
+  margin-bottom: 0.5em;
   width: fit-content;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .canReply:hover{
   background: rgba(128, 128, 128, 0.1);
+}
+.borderBottom{
+  border-bottom: 1px solid gray;
 }
 .textReply{
   padding: 0.5em;
