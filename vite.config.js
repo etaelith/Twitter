@@ -21,6 +21,8 @@ export default defineConfig({
       "@components": "@/components",
       //pages
       "@pages": "@/pages",
+      //hooks
+      "@hooks": "@/hooks",
     },
   },
   plugins: [react()],

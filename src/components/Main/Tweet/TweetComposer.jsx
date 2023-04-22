@@ -7,18 +7,41 @@ import schedule from "@buttons/schedule.svg";
 import styles from "@main/tweet/TweetComposer.module.css";
 
 import CharacterCounter from "./CharacterCounter";
+const icons = [
+  {
+    name: "emoji",
+    url: emoji,
+  },
+  {
+    name: "gif",
+    url: gif,
+  },
+  {
+    name: "imagen",
+    url: imagen,
+  },
+  {
+    name: "poll",
+    url: poll,
+  },
+  {
+    name: "location",
+    url: location,
+  },
+  {
+    name: "schedule",
+    url: schedule,
+  },
+];
 const TweetComposer = ({count, limit}) => {
   const disabled = count === 0 || count > limit;
 
   return (
     <div className={styles.div}>
       <div className={styles.icons}>
-        <img alt="emoji" src={emoji} />
-        <img alt="gif" src={gif} />
-        <img alt="imagen" src={imagen} />
-        <img alt="poll" src={poll} />
-        <img alt="location" src={location} />
-        <img alt="schedule" src={schedule} />
+        {icons.map((e, index) => (
+          <img key={index} alt={e.name} src={e.url} />
+        ))}
       </div>
       <div className={styles.pushTweet}>
         <CharacterCounter count={count} limit={limit} />

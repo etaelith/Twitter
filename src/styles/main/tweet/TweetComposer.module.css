@@ -41,4 +41,5 @@
 }
 .button:disabled{
   background-color: #1da0f296;
+  cursor: auto;
 }
