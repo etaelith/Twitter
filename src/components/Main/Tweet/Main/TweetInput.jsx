@@ -1,7 +1,7 @@
 import styles from "@main/tweet/TweetInput.module.css";
 import {useContext} from "react";
 
-import {MyContext} from "../../../../context/MyContext";
+import {MyContext} from "@/context/MyContext";
 
 const TweetInput = ({height}) => {
   const {tweet, handleTweetChange} = useContext(MyContext);

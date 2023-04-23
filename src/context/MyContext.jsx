@@ -2,7 +2,7 @@ import {useReducer} from "react";
 import {useState} from "react";
 import {createContext} from "react";
 
-import {initialState, reducer} from "../hooks/useLanguage";
+import {initialState, reducer} from "@/hooks/useLanguage";
 
 export const MyContext = createContext();
 
