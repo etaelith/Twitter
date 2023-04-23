@@ -1,4 +1,4 @@
-import styles from "@main/tweet/TweetInput.module.css";
+import styles from "@main/tweet/main/TweetInput.module.css";
 import {useContext} from "react";
 
 import {MyContext} from "@/context/MyContext";

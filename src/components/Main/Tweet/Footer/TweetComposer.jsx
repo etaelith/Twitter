@@ -4,7 +4,7 @@ import imagen from "@buttons/imagen.svg";
 import poll from "@buttons/poll.svg";
 import location from "@buttons/location.svg";
 import schedule from "@buttons/schedule.svg";
-import styles from "@main/tweet/TweetComposer.module.css";
+import styles from "@main/tweet/footer/TweetComposer.module.css";
 
 import CharacterCounter from "./CharacterCounter";
 const icons = [

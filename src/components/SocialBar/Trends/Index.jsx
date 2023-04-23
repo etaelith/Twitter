@@ -1,7 +1,13 @@
 import styles from "@socialbar/trends/Trends.module.css";
 import Middle from "@components/Common/RightBar/Middle";
+import {useContext} from "react";
+import {MyContext} from "@context/MyContext";
+
+import TweetInfo from "../../Main/Tweet/Main/TweetInfo";
 
 import Element from "./Element";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const trends = [
   {
@@ -32,19 +38,24 @@ const trends = [
 ];
 
 const Index = () => {
+  const {state} = useContext(MyContext);
+  const {show} = state;
+
   return (
     <Middle>
-      <div className={styles.divSpan}>
-        <span className={styles.span}>What&apos;s happening</span>
-      </div>
-      <ul className={styles.ul}>
-        {trends.map((e, index) => (
-          <Element key={index} props={e} />
-        ))}
-      </ul>
-      <div className={styles.showMore}>
-        <span className={styles.spanFooter}>Show more</span>
-      </div>
+      {!show ? (
+        <div className={styles.trendsBar}>
+          <Header />
+          <ul className={styles.ul}>
+            {trends.map((e, index) => (
+              <Element key={index} props={e} />
+            ))}
+          </ul>
+          <Footer />
+        </div>
+      ) : (
+        <TweetInfo />
+      )}
     </Middle>
   );
 };

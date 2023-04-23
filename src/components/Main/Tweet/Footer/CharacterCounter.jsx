@@ -1,5 +1,5 @@
 import {useMemo} from "react";
-import styles from "@main/tweet/CharacterCounter.module.css";
+import styles from "@main/tweet/footer/CharacterCounter.module.css";
 
 import CircleSVG from "./CircleSVG";
 import TextDisplay from "./TextDisplay";

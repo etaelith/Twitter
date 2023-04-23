@@ -1,5 +1,5 @@
 import {useMemo} from "react";
-import styles from "@main/tweet/CharacterCounter.module.css";
+import styles from "@main/tweet/footer/CharacterCounter.module.css";
 
 const CircleSVG = ({percentageUsed, excess}) => {
   const circumference = 2 * Math.PI * 40;

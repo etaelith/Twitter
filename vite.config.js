@@ -23,6 +23,8 @@ export default defineConfig({
       "@pages": resolve(__dirname, "src/pages"),
       //hooks
       "@hooks": resolve(__dirname, "src/hooks"),
+      //context
+      "@context": resolve(__dirname, "src/context"),
     },
   },
   plugins: [react()],

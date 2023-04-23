@@ -1,4 +1,4 @@
-import styles from "@main/tweet/InterfaceTweet.module.css";
+import styles from "@main/tweet/main/InterfaceTweet.module.css";
 import world from "@assets/world.svg";
 
 const TweetPrivacy = () => {

@@ -1,4 +1,4 @@
-import styles from "@main/tweet/CharacterCounter.module.css";
+import styles from "@main/tweet/footer/CharacterCounter.module.css";
 
 const TextDisplay = ({excess}) => {
   const textColor = excess > 0 ? "red" : "#657786";

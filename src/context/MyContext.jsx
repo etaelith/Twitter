@@ -8,30 +8,31 @@ export const MyContext = createContext();
 
 export const MyProvider = ({children}) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const [tweet, setTweet] = useState("");
 
   const handleTweetChange = (event) => {
-    setTweet(event.target.value);
+    dispatch({type: "SET_TWEET", payload: event.target.value});
   };
 
   const handleTweetSubmit = (event) => {
     event.preventDefault();
-    setTweet("");
+    dispatch({type: "SET_TWEET", payload: ""});
   };
   const handleIconClick = () => {
     dispatch({type: "TOGGLE_ROTATE"});
     dispatch({type: "TOGGLE_LANGUAGE"});
   };
+  const handleShow = () => {
+    dispatch({type: "SHOW_SWITCH"});
+  };
 
   return (
     <MyContext.Provider
       value={{
-        tweet,
         handleTweetChange,
-
         handleIconClick,
-        handleTweetSubmit,
+        handleShow,
         state,
+        handleTweetSubmit,
       }}
     >
       {children}
