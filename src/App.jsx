@@ -1,6 +1,6 @@
 import Home from "@components/Main/Index";
 import Navbar from "@components/NavBar/Index";
-import RightBar from "@components/socialBar/Index";
+import RightBar from "@components/SocialBar/Index";
 
 import {MyProvider} from "./context/MyContext";
 
