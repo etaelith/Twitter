@@ -1,4 +1,4 @@
-import styles from "@main/header/Card.module.css";
+import styles from "@/styles/main/header/Card.module.css";
 
 const Card = ({children, active, onClick}) => {
   const classNameDiv = active === children ? styles.activeText : "";
