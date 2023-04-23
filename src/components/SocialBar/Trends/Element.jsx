@@ -1,4 +1,4 @@
-import styles from "@socialbar/TrendsElement.module.css";
+import styles from "@socialbar/trends/TrendsElement.module.css";
 import formatTweetsCount from "@utils/count-tweets";
 
 const Element = ({props}) => {

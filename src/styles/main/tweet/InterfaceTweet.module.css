@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
   width: 502px;
   margin-left: 0.5em;
 }
@@ -21,18 +20,7 @@
 .arrowDown{
   margin-left: 1em;
 }
-.input{
-  width: 100%;
-  height: auto;
-  background-color:black;
-  font-size: x-large;
-  margin: auto 0;
-  color: white;
-  border: none;
-}
-.input:focus{
-  outline: none;
-}
+
 .canReply{
   border-radius: 50px;
   padding-left: 0.5em;
@@ -46,11 +34,14 @@
   background: rgba(128, 128, 128, 0.1);
 }
 .borderBottom{
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #2f3336;
 }
 .textReply{
   padding: 0.5em;
   font-weight: bolder;
   color: #1DA1F2;
 }
-
+.form{
+  height: 100%;
+  margin: auto 0;
+}

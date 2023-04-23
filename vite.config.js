@@ -8,21 +8,21 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "src"),
       //styles
-      "@main": "@/styles/main",
-      "@navbar": "@/styles/navbar",
-      "@socialbar": "@/styles/socialbar",
+      "@main": path.resolve(__dirname, "src/styles/main"),
+      "@navbar": path.resolve(__dirname, "src/styles/navbar"),
+      "@socialbar": path.resolve(__dirname, "src/styles/socialbar"),
       //assets
-      "@assets": "@/assets",
-      "@buttons": "@/assets/buttons",
-      "@menu": "@/assets/menu",
+      "@assets": path.resolve(__dirname, "src/assets"),
+      "@buttons": path.resolve(__dirname, "src/assets/buttons"),
+      "@menu": path.resolve(__dirname, "src/assets/menu"),
       //utils
-      "@utils": "@/utils",
+      "@utils": path.resolve(__dirname, "src/utils"),
       //components
-      "@components": "@/components",
+      "@components": path.resolve(__dirname, "src/components"),
       //pages
-      "@pages": "@/pages",
+      "@pages": path.resolve(__dirname, "src/pages"),
       //hooks
-      "@hooks": "@/hooks",
+      "@hooks": path.resolve(__dirname, "src/hooks"),
     },
   },
   plugins: [react()],

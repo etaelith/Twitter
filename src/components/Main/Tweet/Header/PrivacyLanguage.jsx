@@ -1,14 +1,12 @@
+import {useContext} from "react";
 import styles from "@main/tweet/PrivacyLanguage.module.css";
 import iconSwitch from "@buttons/switch.svg";
 import info from "@buttons/info.svg";
-import {useReducer} from "react";
-import {initialState, reducer} from "@hooks/useLanguage";
+
+import {MyContext} from "@/context/MyContext";
+
 const PrivacyLanguage = () => {
-  const [state, dispatch] = useReducer(reducer, initialState);
-  const handleIconClick = () => {
-    dispatch({type: "TOGGLE_ROTATE"});
-    dispatch({type: "TOGGLE_LANGUAGE"});
-  };
+  const {handleIconClick, state} = useContext(MyContext);
 
   return (
     <div className={styles.privacyLanguage}>

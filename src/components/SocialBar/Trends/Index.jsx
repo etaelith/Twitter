@@ -1,4 +1,5 @@
-import styles from "@socialbar/Trends.module.css";
+import styles from "@socialbar/trends/Trends.module.css";
+import Middle from "@components/Common/RightBar/Middle";
 
 import Element from "./Element";
 
@@ -32,7 +33,7 @@ const trends = [
 
 const Index = () => {
   return (
-    <div className={styles.div}>
+    <Middle>
       <div className={styles.divSpan}>
         <span className={styles.span}>What&apos;s happening</span>
       </div>
@@ -41,10 +42,10 @@ const Index = () => {
           <Element key={index} props={e} />
         ))}
       </ul>
-      <div className={styles.divSpan}>
+      <div className={styles.showMore}>
         <span className={styles.spanFooter}>Show more</span>
       </div>
-    </div>
+    </Middle>
   );
 };
 

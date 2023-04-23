@@ -3,6 +3,8 @@
   align-items: stretch;
   color: white;
   min-height: 200px;
+  margin-top: 1em;
+  border-bottom: 1px solid #2f3336;
 }
 .img{
   margin: 0.5em 0 0 0.5em;

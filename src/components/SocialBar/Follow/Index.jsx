@@ -1,7 +1,7 @@
 import React from "react";
 import {useState} from "react";
 import {useEffect} from "react";
-import styles from "@socialbar/FollowCard.module.css";
+import styles from "@socialbar/follow/FollowCard.module.css";
 
 import TwitterCard from "./TwitterCard";
 

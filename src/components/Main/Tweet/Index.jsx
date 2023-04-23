@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@main/tweet/Tweet.module.css";
 
-import InterfaceTweet from "./InterfaceTweet";
+import InterfaceTweet from "./Main/InterfaceTweet";
 
 import avatar from "@/assets/avatar.svg";
 const WriteTweet = () => {

@@ -1,5 +1,5 @@
 .div{
   width: 600px;
-  border-left: 0.5px solid rgb(47, 51, 54);
-  border-right: 0.5px solid rgb(47, 51, 54);
+  border-left: 1px solid #2f3336;
+  border-right: 1px solid #2f3336;
 }

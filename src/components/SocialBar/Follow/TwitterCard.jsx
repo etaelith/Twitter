@@ -1,5 +1,5 @@
 import {useState} from "react";
-import styles from "@socialbar/User.module.css";
+import styles from "@socialbar/follow/User.module.css";
 
 const TwitterCard = ({
   userName = "EtaelithDev",
