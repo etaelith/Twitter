@@ -4,7 +4,7 @@ export const initialState = {
   show: false,
   secondLanguage: "Español",
   tweet: "",
-  secondLanguageTweet: "",
+  TweetSecond: "",
 };
 
 export function reducer(state, action) {
@@ -15,8 +15,8 @@ export function reducer(state, action) {
       return {...state, rotate: !state.rotate};
     case "TOGGLE_LANGUAGE":
       return {...state, language: !state.language};
-    case "SET_SECOND_LANGUAGE":
-      return {...state, secondLanguage: action.payload};
+    case "SET_TWEET_SECOND":
+      return {...state, TweetSecond: action.payload};
     case "SET_TWEET":
       return {...state, tweet: action.payload};
     default:

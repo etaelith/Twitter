@@ -3,9 +3,7 @@ import {useContext} from "react";
 
 import {MyContext} from "@/context/MyContext";
 
-const TweetInput = ({height}) => {
-  const {tweet, handleTweetChange} = useContext(MyContext);
-
+const TweetInput = ({height, handleTweetChange, tweet}) => {
   return (
     <textarea
       className={styles.input}

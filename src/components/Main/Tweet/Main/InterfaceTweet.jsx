@@ -10,18 +10,31 @@ import TweetInput from "./TweetInput";
 import {MyContext} from "@/context/MyContext";
 
 const InterfaceTweet = () => {
-  const {state, handleTweetSubmit} = useContext(MyContext);
+  const {state, handleTweetSubmit, handleTweetChange, handleTweetChangeSecond} =
+    useContext(MyContext);
 
   return (
     <div className={styles.div}>
       <div className={styles.textModule}>
         <PrivacyLanguage />
-        <TweetInput height={`${state.tweet.split("\n").length + 1}em`} />
+        <form className={styles.form} onSubmit={handleTweetSubmit}>
+          {!state.rotate ? (
+            <TweetInput
+              handleTweetChange={handleTweetChange}
+              height={`${state.tweet.split("\n").length + 1}em`}
+              tweet={state.tweet}
+            />
+          ) : (
+            <TweetInput
+              handleTweetChange={handleTweetChangeSecond}
+              height={`${state.TweetSecond.split("\n").length + 1}em`}
+              tweet={state.TweetSecond}
+            />
+          )}
+        </form>
       </div>
       <TweetPrivacy />
-      <form className={styles.form} onSubmit={handleTweetSubmit}>
-        <TweetComposer count={state.tweet.length} limit={280} />
-      </form>
+      <TweetComposer count={state.tweet.length} limit={280} />
     </div>
   );
 };

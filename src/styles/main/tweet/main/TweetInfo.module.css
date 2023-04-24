@@ -18,8 +18,9 @@
 }
 .text {
   color: white;
-  width: 100%;
+  width: 90%;
   margin-left: 0.5em;
+  margin-right: 0.5em;
   margin-top: 3em;
   box-sizing: border-box;
   white-space: pre-wrap;

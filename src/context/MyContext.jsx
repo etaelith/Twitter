@@ -1,5 +1,4 @@
 import {useReducer} from "react";
-import {useState} from "react";
 import {createContext} from "react";
 
 import {initialState, reducer} from "@/hooks/useLanguage";
@@ -11,6 +10,10 @@ export const MyProvider = ({children}) => {
 
   const handleTweetChange = (event) => {
     dispatch({type: "SET_TWEET", payload: event.target.value});
+  };
+
+  const handleTweetChangeSecond = (event) => {
+    dispatch({type: "SET_TWEET_SECOND", payload: event.target.value});
   };
 
   const handleTweetSubmit = (event) => {
@@ -33,6 +36,7 @@ export const MyProvider = ({children}) => {
         handleShow,
         state,
         handleTweetSubmit,
+        handleTweetChangeSecond,
       }}
     >
       {children}
