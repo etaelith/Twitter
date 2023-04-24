@@ -27,15 +27,13 @@ git clone https://github.com/etaelith/react
 
 2. Change to the project directory:
 
-```
-bash
+``` bash
 cd React-Twitter
 ```
 
 3. Install the dependencies using pnpm:
 
-```
-bash
+``` bash
 pnpm install
 ```
 
@@ -43,15 +41,13 @@ pnpm install
 
 To start the development server, run:
 
-```
-bash
+``` bash
 pnpm dev
 ```
 
 To build the project for production, run:
 
-```
-bash
+``` bash
 pnpm build
 ```
 
