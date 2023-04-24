@@ -11,6 +11,7 @@ export default defineConfig({
       "@main": resolve(__dirname, "src/styles/main"),
       "@navbar": resolve(__dirname, "src/styles/navbar"),
       "@socialbar": resolve(__dirname, "src/styles/socialbar"),
+      "@common": resolve(__dirname, "src/styles/common"),
       //assets
       "@assets": resolve(__dirname, "src/assets"),
       "@buttons": resolve(__dirname, "src/assets/buttons"),

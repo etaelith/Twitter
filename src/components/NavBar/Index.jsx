@@ -51,11 +51,13 @@ const menu = [
 ];
 const Navbar = () => {
   return (
-    <ul className={styles.ulElements}>
-      {menu.map((e) => (
-        <Element key={e.name} props={e} />
-      ))}
-    </ul>
+    <div className={styles.ulElements}>
+      <ul className={styles.ul}>
+        {menu.map((e) => (
+          <Element key={e.name} props={e} />
+        ))}
+      </ul>
+    </div>
   );
 };
 

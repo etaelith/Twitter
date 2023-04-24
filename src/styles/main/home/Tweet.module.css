@@ -1,0 +1,59 @@
+.div {
+  width: 100%;
+  border-bottom: 1px solid #2f3336;
+  color: white;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.div:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.article {
+  display: flex;
+  flex-direction: row;
+  padding: 1em;
+}
+
+.img {
+  width: 48px;
+  height: 48px;
+  border-radius: 1000px;
+
+}
+
+.texts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .5em;
+  padding: 0 0.5em;
+
+}
+
+.tags {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  opacity: .6;
+  font-size: .8rem;
+}
+.socialBar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.social{
+  display: flex;
+  align-items: center;
+}
+.span{
+  padding-left: 0.5em;
+  font-weight: 100;
+  font-size: .8em;
+  opacity: 0.5;
+}
