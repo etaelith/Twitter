@@ -5,6 +5,8 @@ import infinity from "react-useanimations/lib/infinity";
 import visibility from "react-useanimations/lib/visibility";
 import airplay from "react-useanimations/lib/airplay";
 import menu from "react-useanimations/lib/menu";
+
+import SocialBar from "./SocialBar";
 const socialBar = [
   {
     icon: airplay,
@@ -44,15 +46,7 @@ const Tweet = ({tweet}) => {
           <div>{tweet.text}</div>
           <div className={styles.socialBar}>
             {socialBar.map((item, index) => (
-              <div key={index} className={styles.social}>
-                <UseAnimation
-                  animation={item.icon}
-                  fillColor={item.color}
-                  size={30}
-                  strokeColor={item.color}
-                />
-                <span className={styles.span}>{item.interactions}</span>
-              </div>
+              <SocialBar key={index} item={item} />
             ))}
             <div>
               <UseAnimation animation={menu} size={30} strokeColor="#fff" />
