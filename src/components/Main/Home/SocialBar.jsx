@@ -9,7 +9,7 @@ const SocialBar = ({item, interactions}) => {
   };
 
   return (
-    <div className={styles.socialSpace} onClick={handleButton}>
+    <div className={styles.socialSpace}>
       <div className={styles.socialItem}>
         <UseAnimations
           alt={item.text}
@@ -19,6 +19,7 @@ const SocialBar = ({item, interactions}) => {
           size={30}
           strokeColor={item.color}
           title={item.text}
+          onClick={handleButton}
         />
         <span className={styles.span} title={interactions}>
           {formatTweetsCount(interactions)}

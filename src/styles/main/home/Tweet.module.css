@@ -39,9 +39,17 @@
 }
 
 .username {
-  opacity: .6;
-  font-size: .8rem;
+  color: #71767b;
+
+  font-size: 15px;
   margin-left: .25em;
+}
+.createdAt{
+  color: #71767b;
+  margin-left: 0.2em;
+  font-size: 15px;
+  line-height: 20px;
+
 }
 .socialBar{
   display: flex;

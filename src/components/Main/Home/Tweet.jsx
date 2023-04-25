@@ -7,6 +7,9 @@ import airplay from "react-useanimations/lib/airplay";
 import menu from "react-useanimations/lib/menu";
 
 import SocialBar from "./SocialBar";
+
+import getElapsedTime from "@/utils/fromNow";
+
 const socialBar = [
   {
     icon: airplay,
@@ -33,6 +36,7 @@ const socialBar = [
     color: "#0286d6",
   },
 ];
+
 const Tweet = ({tweet}) => {
   return (
     <div className={styles.div}>
@@ -42,6 +46,7 @@ const Tweet = ({tweet}) => {
           <div className={styles.tags}>
             <strong className={styles.name}>{tweet.name}</strong>
             <span className={styles.username}>@{tweet.username}</span>
+            <span className={styles.createdAt}>· {getElapsedTime(tweet.createdAt)}</span>
           </div>
           <div>{tweet.text}</div>
           <div className={styles.socialBar}>
@@ -54,6 +59,7 @@ const Tweet = ({tweet}) => {
                 className={styles.socialIcon}
                 size={30}
                 strokeColor="#0286d6"
+                onClick={() => console.log("clicked")}
               />
             </div>
           </div>

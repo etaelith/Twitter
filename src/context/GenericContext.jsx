@@ -44,7 +44,7 @@ export const GenericProvider = ({children}) => {
       setUsers(data.results);
       const tweet = Array.from({length: 10}, generateFakeTweet);
 
-      setTweets(tweet);
+      setTweets(tweet.sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime()));
       setLoading(true);
     };
 
