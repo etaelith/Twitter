@@ -21,35 +21,35 @@ To set up the project, follow these steps:
 
 1. Clone the repository:
 
-\```bash
+``` bash
 git clone https://github.com/etaelith/react
-\```
+```
 
 2. Change to the project directory:
 
-\```bash
+``` bash
 cd React-Twitter
-\```
+```
 
 3. Install the dependencies using pnpm:
 
-\```bash
+``` bash
 pnpm install
-\```
+```
 
 ## Usage
 
 To start the development server, run:
 
-\```bash
+``` bash
 pnpm dev
-\```
+```
 
 To build the project for production, run:
 
-\```bash
+``` bash
 pnpm build
-\```
+```
 
 ## Contributing
 
@@ -61,6 +61,9 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ## Acknowledgements
 
+- [Vite](https://vitejs.dev/) - A build tool for modern web applications
 - [Boring Avatars](https://github.com/boringdesigners/boring-avatars) for the customizable avatars.
 - [React UseAnimations](https://github.com/useAnimations/react-useanimations) for the animation icons.
-- [Faker.js](https://github.com/marak/Faker.js/) for generating realistic data during development.
+for generating realistic data during development:
+- [Faker.js](https://github.com/marak/Faker.js/) 
+- [Random User Generator](https://randomuser.me/)
