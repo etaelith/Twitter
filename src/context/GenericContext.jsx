@@ -10,7 +10,13 @@ export const GenericProvider = ({children}) => {
     const avatar = faker.image.avatar();
     const name = faker.name.fullName();
     const username = faker.internet.userName();
-    const text = faker.lorem.text({max: 240, min: 10});
+    const text = faker.lorem.lines();
+    const arrayReactions = Array.from({length: 3}, () =>
+      faker.datatype.number({min: 1, max: 1500000}),
+    );
+    const maxReaction = Math.max(...arrayReactions) + faker.datatype.number({min: 1, max: 100000});
+
+    arrayReactions.push(maxReaction);
     const createdAt = faker.date.between(
       new Date(Date.now() - 5 * 24 * 60 * 60 * 1000),
       new Date(Date.now() - 1 * 60 * 1000),
@@ -22,6 +28,7 @@ export const GenericProvider = ({children}) => {
       username,
       text,
       createdAt,
+      arrayReactions,
     };
   };
   const [users, setUsers] = useState([]);
@@ -35,7 +42,7 @@ export const GenericProvider = ({children}) => {
       const data = await res.json();
 
       setUsers(data.results);
-      const tweet = Array.from({length: 5}, generateFakeTweet);
+      const tweet = Array.from({length: 10}, generateFakeTweet);
 
       setTweets(tweet);
       setLoading(true);

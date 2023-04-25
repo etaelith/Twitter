@@ -6,7 +6,7 @@ const Element = ({props}) => {
     <li className={styles.li}>
       <h4 className={styles.category}>{props.category}</h4>
       <h2 className={styles.title}>{props.title}</h2>
-      <h4 className={styles.numbers}>{formatTweetsCount(props.numbers)}</h4>
+      <h4 className={styles.numbers}>{`${formatTweetsCount(props.numbers)} Tweets`}</h4>
     </li>
   );
 };

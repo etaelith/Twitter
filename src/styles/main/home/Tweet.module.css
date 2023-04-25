@@ -14,7 +14,7 @@
 .article {
   display: flex;
   flex-direction: row;
-  padding: 1em;
+  padding: 1em 1em 0 1em;
 }
 
 .img {
@@ -34,12 +34,14 @@
 
 .tags {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
 }
 
 .username {
   opacity: .6;
   font-size: .8rem;
+  margin-left: .25em;
 }
 .socialBar{
   display: flex;
@@ -59,4 +61,15 @@
   font-weight: 100;
   font-size: .8em;
   opacity: 0.5;
+}
+.socialItem:hover{
+  border-radius: 50px;
+  background-color: #ffffff08;
+}
+.socialIcon{
+  margin:.5em .25em;
+}
+
+.socialIcon:last-child{
+  margin:.5em .5em;
 }

@@ -11,6 +11,9 @@ const TweetInfo = () => {
     <Middle>
       <div className={styles.div}>
         <div className={styles.divImg}>
+          <div className={styles.divImgText}>
+            Tweet{!state.rotate ? ` en ${state.secondLanguage} ` : " in English "}:
+          </div>
           <img className={styles.img} src={cross} onClick={handleShow} />
         </div>
         <div className={styles.text}>{state.rotate ? state.tweet : state.TweetSecond}</div>

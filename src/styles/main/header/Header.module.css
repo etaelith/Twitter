@@ -1,8 +1,13 @@
 .div {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   display: grid;
   grid-template-rows: 1fr 1fr;
   height: 107px;
   color: white;
+  background-color: rgba(0 0, 0, 0.65);
+  backdrop-filter: blur(12px);
 }
 
 .home {

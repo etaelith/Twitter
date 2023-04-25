@@ -46,10 +46,15 @@ const Tweet = ({tweet}) => {
           <div>{tweet.text}</div>
           <div className={styles.socialBar}>
             {socialBar.map((item, index) => (
-              <SocialBar key={index} item={item} />
+              <SocialBar key={index} interactions={tweet.arrayReactions[index]} item={item} />
             ))}
-            <div>
-              <UseAnimation animation={menu} size={30} strokeColor="#fff" />
+            <div className={styles.socialItem}>
+              <UseAnimation
+                animation={menu}
+                className={styles.socialIcon}
+                size={30}
+                strokeColor="#0286d6"
+              />
             </div>
           </div>
         </div>

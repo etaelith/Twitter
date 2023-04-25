@@ -7,14 +7,14 @@ export default function formatTweetsCount(count) {
   if (count >= 1000000) {
     const countFormatted = formatter.format(count / 1000000);
 
-    return countFormatted + "M Tweets";
+    return countFormatted + "M";
   } else if (count >= 10000) {
     const countFormatted = formatter.format(count / 1000);
 
-    return countFormatted + "k Tweets";
+    return countFormatted + "k";
   } else {
     const countFormatted = formatter.format(count);
 
-    return countFormatted.replace(",", ".") + " Tweets";
+    return countFormatted;
   }
 }

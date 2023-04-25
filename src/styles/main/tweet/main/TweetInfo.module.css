@@ -1,11 +1,13 @@
 .div{
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
 }
 .divImg{
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .img{
   position: absolute;
@@ -16,12 +18,19 @@
   margin-top: 0.5em;
   margin-right: 0.5em;
 }
+.divImgText{
+  margin-left: 1em;
+  margin-top: 1em;
+  color:#0286d6;
+  font-weight: 700;
+  font-style: oblique;
+}
 .text {
   color: white;
   width: 90%;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  margin-top: 3em;
+  height: 100%;
+  margin: 2em 1em 1em 1em;
+
   box-sizing: border-box;
   white-space: pre-wrap;
 }
