@@ -1,4 +1,4 @@
-export default function getElapsedTime(createdAt) {
+export function getElapsedTime(createdAt) {
   const elapsedTime = (Date.now() - createdAt.getTime()) / 1000;
 
   if (elapsedTime < 60) {
@@ -25,4 +25,19 @@ export default function getElapsedTime(createdAt) {
 
     return monthNames[createdAt.getMonth()] + " " + createdAt.getDate(); // días
   }
+}
+export function getTitle(createdAt) {
+  return (
+    createdAt.toLocaleString("en-US", {
+      hour12: true,
+      hour: "numeric",
+      minute: "numeric",
+    }) +
+    " · " +
+    createdAt.toLocaleString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    })
+  );
 }

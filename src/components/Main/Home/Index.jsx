@@ -1,7 +1,7 @@
 import styles from "@main/home/Home.module.css";
 import {useContext} from "react";
 
-import Tweet from "./Tweet";
+import Tweet from "./Tweet/Index";
 import NewTweets from "./NewTweets";
 
 import {GenericContext} from "@/context/GenericContext";

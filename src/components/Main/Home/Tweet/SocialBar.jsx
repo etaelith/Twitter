@@ -1,5 +1,5 @@
 import UseAnimations from "react-useanimations";
-import styles from "@main/home/Tweet.module.css";
+import styles from "@main/home/tweet/Tweet.module.css";
 
 import formatTweetsCount from "@/utils/count-tweets";
 
