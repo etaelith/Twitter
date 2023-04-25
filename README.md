@@ -64,4 +64,6 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 - [Vite](https://vitejs.dev/) - A build tool for modern web applications
 - [Boring Avatars](https://github.com/boringdesigners/boring-avatars) for the customizable avatars.
 - [React UseAnimations](https://github.com/useAnimations/react-useanimations) for the animation icons.
-- [Faker.js](https://github.com/marak/Faker.js/) for generating realistic data during development.
+for generating realistic data during development:
+- [Faker.js](https://github.com/marak/Faker.js/) 
+- [Random User Generator] (https://randomuser.me/)
