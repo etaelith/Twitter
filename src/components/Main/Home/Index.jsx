@@ -8,13 +8,15 @@ import {GenericContext} from "@/context/GenericContext";
 import Loading from "@/components/Common/RightBar/Loading";
 
 const Index = () => {
-  const {tweets, loading} = useContext(GenericContext);
-  const elements = tweets.map((tweet, index) => <Tweet key={index} tweet={tweet} />);
+  const {state, showResults} = useContext(GenericContext);
+  const elements = state.tweets.map((tweet, index) => <Tweet key={index} tweet={tweet} />);
 
   return (
     <div className={styles.div}>
-      <NewTweets />
-      {!loading ? <Loading /> : elements}
+      {state.newTweets.length > 0 && (
+        <NewTweets length={state.newTweets.length} showResults={showResults} />
+      )}
+      {!state.loadingTweets ? <Loading /> : elements}
     </div>
   );
 };
