@@ -66,4 +66,4 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 - [React UseAnimations](https://github.com/useAnimations/react-useanimations) for the animation icons.
 for generating realistic data during development:
 - [Faker.js](https://github.com/marak/Faker.js/) 
-- [Random User Generator] (https://randomuser.me/)
+- [Random User Generator](https://randomuser.me/)
