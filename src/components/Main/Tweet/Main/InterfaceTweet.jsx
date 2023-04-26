@@ -14,6 +14,7 @@ const InterfaceTweet = () => {
   const {state, handleTweetChange, handleTweetChangeSecond, handleTweetSubmit} =
     useContext(MyContext);
   const {pushTweets} = useContext(GenericContext);
+  const disable = state.tweet.length + state.tweetSecond.length;
 
   return (
     <div className={styles.div}>
@@ -34,7 +35,7 @@ const InterfaceTweet = () => {
         )}
       </div>
       <TweetPrivacy />
-      <TweetComposer checkTweet={pushTweets} count={state.tweet.length} limit={280} />
+      <TweetComposer checkTweet={pushTweets} count={disable} limit={280} />
     </div>
   );
 };

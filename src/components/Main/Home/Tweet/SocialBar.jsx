@@ -1,11 +1,17 @@
 import UseAnimations from "react-useanimations";
 import styles from "@main/home/tweet/Tweet.module.css";
+import {useState} from "react";
 
 import formatTweetsCount from "@/utils/count-tweets";
 
 const SocialBar = ({item, interactions}) => {
+  const [color, setColor] = useState(item.color);
   const handleButton = () => {
-    console.log("hola");
+    if (color === item.activeColor) {
+      setColor(item.color);
+    } else {
+      setColor(item.activeColor);
+    }
   };
 
   return (
@@ -15,9 +21,10 @@ const SocialBar = ({item, interactions}) => {
           alt={item.text}
           animation={item.icon}
           className={styles.socialIcon}
-          fillColor={item.color}
+          fillColor={color}
+          options={{loop: false}}
           size={30}
-          strokeColor={item.color}
+          strokeColor={color}
           title={item.text}
           onClick={handleButton}
         />

@@ -18,13 +18,15 @@ const socialBar = [
     text: "Retweet",
     icon: infinity,
     interactions: 2.353,
-    color: "#00ba7c",
+    color: "#0286d6",
+    activeColor: "#00ba7c",
   },
   {
     icon: heart,
     text: "Like",
     interactions: 2.353,
-    color: "#f91880",
+    color: "#0286d6",
+    activeColor: "#f91880",
   },
   {
     icon: visibility,
