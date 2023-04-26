@@ -5,11 +5,13 @@ export const initialState = {
   loadingUsers: false,
   loadingTweets: false,
   loadingNewTweets: false,
+  lastTweet: 432000000,
 };
 export const ActionTypes = {
   SET_USERS: "SET_USERS",
   SET_TWEETS: "SET_TWEETS",
   SET_NEW_TWEETS: "SET_NEW_TWEETS",
+  SET_LAST_TWEET: "SET_LAST_TWEET",
   SET_LOADING_TWEETS: "SET_LOADING_TWEETS",
   SET_LOADING_USERS: "SET_LOADING_USERS",
   SET_LOADING_NEW_TWEETS: "SET_LOADING_NEW_TWEETS",
@@ -22,9 +24,12 @@ export const reducer = (state, action) => {
         users: action.payload,
       };
     case ActionTypes.SET_TWEETS:
+      const homeTweets = action.payload;
+      const firstTweets = homeTweets.sort((a, b) => a.createdAt.getTime() - b.createdAt.getTime());
+
       return {
         ...state,
-        tweets: action.payload,
+        tweets: firstTweets,
       };
     case ActionTypes.SET_NEW_TWEETS:
       return {
@@ -46,7 +51,15 @@ export const reducer = (state, action) => {
         newTweets: [],
         loadingNewTweets: false,
       };
+    case ActionTypes.SET_LAST_TWEET:
+      const createdAt = new Date(state.tweets[0].createdAt);
+      const now = new Date();
+      const lastTime = now.getTime() - createdAt.getTime();
 
+      return {
+        ...state,
+        lastTweet: lastTime,
+      };
     case ActionTypes.SET_LOADING_TWEETS:
       return {
         ...state,

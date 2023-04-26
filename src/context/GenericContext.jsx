@@ -7,7 +7,8 @@ export const GenericContext = createContext();
 
 export const GenericProvider = ({children}) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const generateFakeTweet = () => {
+
+  const generateFakeData = () => {
     const avatar = faker.image.avatar();
     const name = faker.name.fullName();
     const username = faker.internet.userName();
@@ -18,9 +19,10 @@ export const GenericProvider = ({children}) => {
     const maxReaction = Math.max(...arrayReactions) + faker.datatype.number({min: 1, max: 100000});
 
     arrayReactions.push(maxReaction);
+
     const createdAt = faker.date.between(
-      new Date(Date.now() - 5 * 24 * 60 * 60 * 1000),
-      new Date(Date.now() - 1000),
+      new Date(Date.now() - state.lastTweet),
+      new Date(Date.now()),
     );
 
     return {
@@ -32,39 +34,18 @@ export const GenericProvider = ({children}) => {
       arrayReactions,
     };
   };
-  const generateNewFakeTweet = (times) => {
-    const avatar = faker.image.avatar();
-    const name = faker.name.fullName();
-    const username = faker.internet.userName();
-    const text = faker.lorem.lines();
-    const arrayReactions = Array.from({length: 3}, () =>
-      faker.datatype.number({min: 1, max: 1500000}),
-    );
-    const maxReaction = Math.max(...arrayReactions) + faker.datatype.number({min: 1, max: 100000});
 
-    arrayReactions.push(maxReaction);
-    const createdAt = faker.date.between(times, new Date(Date.now() - 1000));
-
-    return {
-      avatar,
-      name,
-      username,
-      text,
-      createdAt,
-      arrayReactions,
-    };
-  };
   const userResult = async () => {
     const res = await fetch("https://randomuser.me/api/?results=5");
     const data = await res.json();
 
     dispatch({type: ActionTypes.SET_USERS, payload: data.results});
-    const tweet = Array.from({length: 10}, generateFakeTweet);
+    const tweet = Array.from({length: 10}, generateFakeData);
 
     dispatch({type: ActionTypes.SET_LOADING_USERS, payload: true});
     dispatch({
       type: ActionTypes.SET_TWEETS,
-      payload: tweet.sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime()),
+      payload: tweet,
     });
     dispatch({type: ActionTypes.SET_LOADING_TWEETS, payload: true});
   };
@@ -75,8 +56,8 @@ export const GenericProvider = ({children}) => {
     userResult();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  const newResults = async (times) => {
-    const newTweets = Array.from({length: 35}, () => generateNewFakeTweet(times));
+  const newResults = async () => {
+    const newTweets = Array.from({length: 35}, generateFakeData);
 
     dispatch({
       type: ActionTypes.SET_NEW_TWEETS,
@@ -86,16 +67,14 @@ export const GenericProvider = ({children}) => {
   };
   const showResults = () => {
     dispatch({type: ActionTypes.SET_SHOW_RESULTS});
+    dispatch({type: ActionTypes.SET_LAST_TWEET});
   };
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      const defaultDate = new Date(Date.now() - 60 * 60 * 1000);
-      const date = new Date(state.tweets[0]?.createdAt || defaultDate);
-
-      newResults(date.getTime());
+      newResults();
       //hay que agregarle intervalo
-    }, 30000);
+    }, 15000);
 
     return () => clearInterval(intervalId);
   }, []);
