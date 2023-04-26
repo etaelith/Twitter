@@ -15,6 +15,8 @@ export const ActionTypes = {
   SET_LOADING_TWEETS: "SET_LOADING_TWEETS",
   SET_LOADING_USERS: "SET_LOADING_USERS",
   SET_LOADING_NEW_TWEETS: "SET_LOADING_NEW_TWEETS",
+  PUSH_OWN_TWEETS: "PUSH_OWN_TWEETS",
+  PUSH_NEW_TWEETS: "PUSH_NEW_TWEETS",
 };
 export const reducer = (state, action) => {
   switch (action.type) {
@@ -74,6 +76,11 @@ export const reducer = (state, action) => {
       return {
         ...state,
         loadingNewTweets: action.payload,
+      };
+    case ActionTypes.PUSH_OWN_TWEETS:
+      return {
+        ...state,
+        tweets: tweets.unshift(action.payload),
       };
     default:
       return state;

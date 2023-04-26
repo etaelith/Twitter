@@ -8,14 +8,14 @@ import Loading from "@/components/Common/RightBar/Loading";
 import {getRandomBoolean} from "@/utils/randomFollow";
 
 const FollowList = () => {
-  const {state} = useContext(GenericContext);
+  const {stateGeneric} = useContext(GenericContext);
 
   return (
     <div className={styles.cardFollow}>
-      {!state.loadingUsers ? (
+      {!stateGeneric.loadingUsers ? (
         <Loading />
       ) : (
-        state.users.map((user) => (
+        stateGeneric.users.map((user) => (
           <TwitterCard
             key={user.login.uuid}
             image={user.picture.large}

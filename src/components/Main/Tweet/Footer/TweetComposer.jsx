@@ -33,7 +33,7 @@ const icons = [
     url: schedule,
   },
 ];
-const TweetComposer = ({count, limit}) => {
+const TweetComposer = ({count, limit, checkTweet}) => {
   const disabled = count === 0 || count > limit;
 
   return (
@@ -45,7 +45,7 @@ const TweetComposer = ({count, limit}) => {
       </div>
       <div className={styles.pushTweet}>
         <CharacterCounter count={count} limit={limit} />
-        <button className={styles.button} disabled={disabled}>
+        <button className={styles.button} disabled={disabled} onClick={checkTweet}>
           Tweet
         </button>
       </div>

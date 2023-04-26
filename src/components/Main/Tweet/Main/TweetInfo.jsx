@@ -16,7 +16,7 @@ const TweetInfo = () => {
           </div>
           <img className={styles.img} src={cross} onClick={handleShow} />
         </div>
-        <div className={styles.text}>{state.rotate ? state.tweet : state.TweetSecond}</div>
+        <div className={styles.text}>{state.rotate ? state.tweet : state.tweetSecond}</div>
       </div>
     </Middle>
   );

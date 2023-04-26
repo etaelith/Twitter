@@ -7,15 +7,15 @@ import {GenericProvider} from "./context/GenericContext";
 
 const App = () => {
   return (
-    <GenericProvider>
-      <MyProvider>
+    <MyProvider>
+      <GenericProvider>
         <section className="App">
           <Navbar />
           <Home />
           <RightBar />
         </section>
-      </MyProvider>
-    </GenericProvider>
+      </GenericProvider>
+    </MyProvider>
   );
 };
 

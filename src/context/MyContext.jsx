@@ -1,31 +1,40 @@
 import {useReducer} from "react";
 import {createContext} from "react";
 
-import {initialState, reducer} from "@/hooks/useLanguage";
+import avatar from "@/assets/avatar.svg";
+import {initialState, reducer, ActionTypes} from "@/hooks/useLanguage";
 
 export const MyContext = createContext();
 
 export const MyProvider = ({children}) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-
+  const user = (text) => {
+    return {
+      avatar: avatar,
+      name: "Deployer Dev",
+      username: "Deployer23",
+      text: text,
+      createdAt: new Date(),
+      arrayReactions: [0, 0, 0, 0],
+    };
+  };
   const handleTweetChange = (event) => {
-    dispatch({type: "SET_TWEET", payload: event.target.value});
+    dispatch({type: ActionTypes.SET_TWEET, payload: event.target.value});
   };
 
   const handleTweetChangeSecond = (event) => {
-    dispatch({type: "SET_TWEET_SECOND", payload: event.target.value});
+    dispatch({type: ActionTypes.SET_TWEET_SECOND, payload: event.target.value});
   };
 
-  const handleTweetSubmit = (event) => {
-    event.preventDefault();
-    dispatch({type: "SET_TWEET", payload: ""});
-  };
   const handleIconClick = () => {
-    dispatch({type: "TOGGLE_ROTATE"});
-    dispatch({type: "TOGGLE_LANGUAGE"});
+    dispatch({type: ActionTypes.TOGGLE_ROTATE});
+    dispatch({type: ActionTypes.TOGGLE_LANGUAGE});
   };
   const handleShow = () => {
-    dispatch({type: "SHOW_SWITCH"});
+    dispatch({type: ActionTypes.SHOW_SWITCH});
+  };
+  const clearTweet = () => {
+    dispatch({type: ActionTypes.CLEAR_TWEETS});
   };
 
   return (
@@ -35,8 +44,9 @@ export const MyProvider = ({children}) => {
         handleIconClick,
         handleShow,
         state,
-        handleTweetSubmit,
+        clearTweet,
         handleTweetChangeSecond,
+        user,
       }}
     >
       {children}

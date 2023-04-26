@@ -2,11 +2,15 @@ import {useEffect, useReducer} from "react";
 import {createContext} from "react";
 import {faker} from "@faker-js/faker";
 import {initialState, reducer, ActionTypes} from "@hooks/useUsers";
+import {useContext} from "react";
+
+import {MyContext} from "./MyContext";
 
 export const GenericContext = createContext();
 
 export const GenericProvider = ({children}) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [stateGeneric, dispatch] = useReducer(reducer, initialState);
+  const {state, user, clearTweet} = useContext(MyContext);
 
   const generateFakeData = () => {
     const avatar = faker.image.avatar();
@@ -21,7 +25,7 @@ export const GenericProvider = ({children}) => {
     arrayReactions.push(maxReaction);
 
     const createdAt = faker.date.between(
-      new Date(Date.now() - state.lastTweet),
+      new Date(Date.now() - stateGeneric.lastTweet),
       new Date(Date.now()),
     );
 
@@ -66,21 +70,34 @@ export const GenericProvider = ({children}) => {
     dispatch({type: ActionTypes.SET_LOADING_NEW_TWEETS, payload: true});
   };
   const showResults = () => {
-    dispatch({type: ActionTypes.SET_SHOW_RESULTS});
-    dispatch({type: ActionTypes.SET_LAST_TWEET});
+    dispatch({type: ActionTypes.PUSH_NEW_TWEETS});
+    /* dispatch({type: ActionTypes.SET_LAST_TWEET}); */
   };
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       newResults();
-      //hay que agregarle intervalo
     }, 15000);
 
     return () => clearInterval(intervalId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  const pushTweets = () => {
+    const newTweets = [];
+
+    if (state.tweet.trim().length > 0) {
+      newTweets.push(user(state.tweet));
+    }
+    if (state.tweetSecond.trim().length > 0) {
+      newTweets.push(user(state.tweetSecond));
+    }
+
+    dispatch({type: ActionTypes.SET_NEW_TWEETS, payload: newTweets});
+    clearTweet();
+  };
 
   return (
-    <GenericContext.Provider value={{state, dispatch, showResults}}>
+    <GenericContext.Provider value={{stateGeneric, dispatch, showResults, pushTweets}}>
       {children}
     </GenericContext.Provider>
   );
