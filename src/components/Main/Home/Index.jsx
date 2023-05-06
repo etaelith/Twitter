@@ -1,5 +1,6 @@
 import styles from "@main/home/Home.module.css";
 import {useContext} from "react";
+import useInfiniteScroll from "@utils/useInfiniteScroll";
 
 import Tweet from "./Tweet/Index";
 import NewTweets from "./NewTweets";
@@ -9,7 +10,17 @@ import Loading from "@/components/Common/RightBar/Loading";
 
 const Index = () => {
   const {stateGeneric, showResults} = useContext(GenericContext);
-  const elements = stateGeneric.tweets.map((tweet, index) => <Tweet key={index} tweet={tweet} />);
+  const [displayedTweetsCount, handleObserverDown, handleObserverUp] = useInfiniteScroll(15);
+
+  const elements = stateGeneric.tweets.slice(0, displayedTweetsCount).map((tweet, index) => {
+    if (index === 0) {
+      return <Tweet key={index} refCallback={handleObserverUp} tweet={tweet} />;
+    } else if (index === displayedTweetsCount - 1) {
+      return <Tweet key={index} refCallback={handleObserverDown} tweet={tweet} />;
+    } else {
+      return <Tweet key={index} tweet={tweet} />;
+    }
+  });
 
   return (
     <div className={styles.div}>

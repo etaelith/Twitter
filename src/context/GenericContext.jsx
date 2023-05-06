@@ -58,7 +58,6 @@ export const GenericProvider = ({children}) => {
     dispatch({type: ActionTypes.SET_LOADING, payload: false});
     dispatch({type: ActionTypes.SET_LOADING_USERS, payload: false});
     userResult();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const newResults = async () => {
     const newTweets = Array.from({length: 35}, generateFakeData);
@@ -71,7 +70,6 @@ export const GenericProvider = ({children}) => {
   };
   const showResults = () => {
     dispatch({type: ActionTypes.PUSH_NEW_TWEETS});
-    /* dispatch({type: ActionTypes.SET_LAST_TWEET}); */
   };
 
   useEffect(() => {
@@ -80,7 +78,6 @@ export const GenericProvider = ({children}) => {
     }, 15000);
 
     return () => clearInterval(intervalId);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const pushTweets = () => {
     const newTweets = [];

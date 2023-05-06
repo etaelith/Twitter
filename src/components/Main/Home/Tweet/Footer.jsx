@@ -13,6 +13,7 @@ const socialBar = [
     text: "Reply",
     interactions: 33,
     color: "#0286d6",
+    activeColor: "#0286d6",
   },
   {
     text: "Retweet",
@@ -33,6 +34,7 @@ const socialBar = [
     text: "View",
     interactions: 2.353,
     color: "#0286d6",
+    activeColor: "#0286d6",
   },
 ];
 const Footer = ({tweet}) => {
@@ -47,6 +49,7 @@ const Footer = ({tweet}) => {
           className={styles.socialIcon}
           size={30}
           strokeColor="#0286d6"
+          // eslint-disable-next-line no-console
           onClick={() => console.log("clicked")}
         />
       </div>
